@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 255 255 255;
+  --color-bg-alt: 246 247 249;
+  --color-text: 15 23 42;
+  --color-text-secondary: 71 85 105;
+  --color-accent: 13 148 136;
+  --color-border: 226 232 240;
+}
+
+.dark {
+  --color-bg: 10 25 47;
+  --color-bg-alt: 17 34 64;
+  --color-text: 226 232 240;
+  --color-text-secondary: 148 163 184;
+  --color-accent: 45 212 191;
+  --color-border: 30 58 95;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: rgb(var(--color-accent) / 0.25);
+  color: rgb(var(--color-text));
+}
+
+.link-underline {
+  background-image: linear-gradient(rgb(var(--color-accent)), rgb(var(--color-accent)));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.25s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
