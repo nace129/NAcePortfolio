@@ -20,7 +20,7 @@ export function OtherProjects() {
               <span>
                 <span className="block font-semibold text-text">{project.name}</span>
                 <span className="mt-1 block text-sm text-text-secondary">
-                  {project.description}
+                  {project.pitch}
                 </span>
               </span>
             </a>
