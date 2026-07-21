@@ -1,17 +1,27 @@
 export const personal = {
   name: "Nidhi Shah",
-  positioning:
-    "Full-Stack Software Engineer building Applied AI systems — RAG pipelines, LLM orchestration, and distributed cloud infrastructure",
+  positioning:[
+    "Full-Stack Software Engineer - Applied AI focus",
+    "RAG, LLM orchestration, and the distributed systems underneath them",
+  ],
   location: "San Francisco Bay Area (open to relocate)",
   github: "https://github.com/nace129",
   githubHandle: "github.com/nace129",
   linkedin: "https://linkedin.com/in/nidhishah4065",
   linkedinHandle: "linkedin.com/in/nidhishah4065",
+  twitter: "https://x.com/NidhiS129",
+  twitterHandle: "@NidhiS129",
+  youtube: "https://www.youtube.com/@nidhishah8206",
+  youtubeHandle: "@nidhishah8206",
   email: "nidhis0120@gmail.com",
   resumeUrl: "/resume.pdf",
 };
 
-export const about = `Full-stack AI software engineer with 2.5 years of production experience, currently finishing a Master's in Software Engineering (Cloud & Mobile Computing) at San Jose State University. I've built AI-integrated products end-to-end — RAG pipelines, LLM integration, function calling, and vector databases on distributed cloud infrastructure. At Sophos, I maintained 99.9% uptime for 25.7M protected devices. I'm an AWS Certified Solutions Architect.`;
+export const about = `I'm a full-stack software engineer with 2.5 years of production experience, currently graduated with Master's in Software Engineering (Cloud & Mobile Computing) at San José State University. I spent that production time at Sophos owning reliability for distributed systems protecting 25.7M devices, and started my career as a security analyst - logs, threat detection, vulnerability assessment - which is where the instinct to think about access control and audit trails, not just features, comes from.
+
+That instinct now shows up in my Applied AI work: RAG pipelines, LLM orchestration with function calling and structured outputs, and the access-control and evaluation layers that make AI systems trustworthy enough to put in front of enterprise users.
+
+AWS Certified Solutions Architect – Associate, Certified Ethical Hacker (CEH). Currently looking for full-stack or Applied AI engineering roles, and everything below is real, working code, not just claims on a page.`;
 
 export interface ExperienceItem {
   role: string;
@@ -48,6 +58,15 @@ export const experience: ExperienceItem[] = [
       "Improved PostgreSQL query performance 45% across 3 production services",
     ],
   },
+  {
+    role: "Security Analyst - VAPT & SOC",
+    org: "TechDefence Labs",
+    period: "June 2021 – Nov 2021",
+    bullets: [
+      "Strengthened infrastructure security by analyzing real-time logs with Splunk SIEM, proactively identifying and mitigating threats to reduce incident response time",
+      "Conducted security assessments using Nessus, Nmap, and Wireshark, delivering actionable recommendations that improved system resilience and data integrity",
+    ],
+  },
 ];
 
 export interface Project {
@@ -63,107 +82,92 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "VisionBuddy",
-    pitch:
-      "Real-time multimodal AI agent that narrates the physical world for blind users through a Flutter Android app.",
-    problem:
-      "Visually impaired users need real-time, hands-free scene understanding.",
-    approach:
-      "Built a dual-model NVIDIA NIM vision pipeline (primary + automatic fallback model) feeding into Nemotron-70B for natural-language enhancement, then text-to-speech output. 5 specialized analysis modes: general scene, medical/medication ID, navigation safety, text/OCR reading, and currency recognition.",
-    stack: [
-      "Flutter",
-      "Dart",
-      "FastAPI",
-      "Python",
-      "NVIDIA NIM (Nemotron)",
-      "REST API",
-    ],
-    outcome:
-      "Core AI pipeline and backend production-ready; mobile-backend wiring in progress",
-    github: "https://github.com/nace129/VisionBuddy",
-  },
-  {
     name: "DataTrust",
     pitch:
       "Policy-aware enterprise AI assistant enforcing role-based LLM access control with full audit traceability.",
     problem:
-      "Enterprises need visibility and governance over how employees use AI, not just AI capability itself.",
+      "Enterprises are adopting LLMs faster than they can govern them — most RAG systems assume every user can see every document, which breaks the moment sensitive and general-access data share a knowledge base.",
     approach:
-      "Built RAG with semantic search, function calling, tool use, and structured outputs, layered with role-based access controls and shadow-AI usage detection.",
-    stack: ["Python", "TypeScript", "RAG", "Semantic Search", "Vector DB"],
-    outcome: "Policy-enforced AI orchestration system with audit trail",
+      "Built a RAG pipeline with semantic search, function calling, tool use, and structured outputs, layered with role-based access control at the retrieval layer and shadow-AI usage detection to flag ungoverned AI interactions.",
+    stack: ["Python", "TypeScript", "RAG", "Semantic Search", "Vector DB", "Function Calling", "Access Control"],
+    outcome:
+      "Production-style AI orchestration system with enforced access boundaries and a full audit trail on every AI interaction — [FILL IN real number once tested, e.g. 'blocked X% of out-of-role retrieval attempts in adversarial testing'].",
     github: "https://github.com/SJSU-DataTrust/DataTrust_Project",
+  },
+  {
+    name: "VisionBuddy",
+    pitch:
+      "Real-time multimodal AI agent that narrates the physical world for blind users through a mobile app.",
+    problem:
+      "Visually impaired users need real-time, hands-free scene understanding that goes beyond simple object labels — navigation, medication ID, and text reading all require different kinds of visual reasoning.",
+    approach:
+      "Built a dual-model NVIDIA NIM vision pipeline with automatic fallback, feeding into Nemotron-70B for natural-language scene description, across five specialized modes: general scene, medical/medication ID, navigation safety, text/OCR reading, and currency recognition.",
+    stack: ["Flutter", "Dart", "FastAPI", "Python", "NVIDIA NIM", "Multimodal AI", "Text-to-Speech"],
+    outcome:
+      "Five working AI-assisted accessibility modes with automatic model fallback for reliability — [FILL IN: latency per query, or accuracy on a small test set of scenes].",
+    github: "https://github.com/nace129/VisionBuddy",
   },
   {
     name: "AI Usage Risk Intelligence Platform",
     pitch:
-      "A telemetry and risk-detection system for enterprise LLM usage.",
+      "Telemetry and risk-detection platform that flags PII exposure and compliance risk in real LLM interactions.",
     problem:
-      "Companies need to detect compliance risk (PII leakage, sensitive data exposure) in real employee-AI interactions.",
+      "Enterprises have no visibility into what employees are actually sending to AI tools like ChatGPT — sensitive data can leak with zero detection or audit trail.",
     approach:
-      "Chrome extension captures prompt/response pairs from ChatGPT, correlates them via UUID turn-tracking, and runs an asynchronous PII-detection + explainable (rule-based, auditable) risk-scoring pipeline.",
-    stack: [
-      "Java",
-      "Spring Boot",
-      "PostgreSQL",
-      "Chrome Extension (Manifest V3)",
-      "AWS",
-    ],
-    outcome: "Real-time, auditable risk scoring for enterprise AI usage",
-    github:
-      "https://github.com/nace129/AI-Usage-Risk-Intelligence-Platform",
+      "Built a browser extension that captures prompt/response pairs, correlates them by conversation via UUID turn-tracking, and runs an asynchronous PII-detection and explainable, rule-based risk-scoring pipeline so every flag is auditable, not a black-box score.",
+    stack: ["Java", "Spring Boot", "PostgreSQL", "Chrome Extension (Manifest V3)", "AWS", "PII Detection"],
+    outcome:
+      "End-to-end risk telemetry pipeline from browser capture to explainable risk score — [FILL IN: detection precision/recall, or number of interaction types covered].",
+    github: "https://github.com/nace129/AI-Usage-Risk-Intelligence-Platform",
   },
   {
     name: "CareerPilot",
     pitch:
-      "Full-stack platform that analyzes resumes against job descriptions and coaches candidates through AI-powered mock interviews.",
+      "AI-powered interview prep platform that analyzes resumes against job descriptions and coaches candidates through mock interviews.",
     problem:
-      "Candidates struggle to prepare effectively and get personalized feedback for technical/behavioral interviews.",
+      "Candidates struggle to get specific, personalized feedback on resume-job fit and interview performance without expensive human coaching.",
     approach:
-      "Structured-output LLM integration (Gemini + Cohere) for resume analysis, speech-to-text for audio-based mock interviews, real-time feedback.",
-    stack: [
-      "React",
-      "TypeScript",
-      "Flask",
-      "Gemini API",
-      "Cohere API",
-      "MongoDB",
-      "AWS",
-    ],
-    outcome: "AI interview preparation platform with resume-to-JD analysis",
+      "Built structured-output LLM integration across Gemini and Cohere for resume-to-JD analysis, with audio-based mock interviews and real-time AI feedback on responses.",
+    stack: ["React", "TypeScript", "Flask", "Gemini API", "Cohere API", "MongoDB", "AWS"],
+    outcome:
+      "Full-stack AI coaching product spanning resume analysis to live audio interview feedback — [FILL IN: number of resume/JD pairs tested, or feedback accuracy/usefulness if you've gathered any].",
     github: "https://github.com/nace129/CareerPilotProject",
   },
   {
     name: "BookMyTable",
     pitch:
-      "Cloud-native restaurant reservation platform with real-time availability, built and deployed as project lead for a team of 4.",
+      "Cloud-native restaurant reservation platform with real-time table availability, built and deployed as project lead.",
     problem:
-      "Restaurants need reliable real-time booking with an admin-facing management layer.",
+      "Restaurants need reliable real-time booking with an admin-facing management layer, without the complexity or cost of enterprise reservation software.",
     approach:
-      "Spring Boot microservices architecture with MongoDB, real-time table availability, admin dashboard, deployed on AWS EC2/S3 across Agile sprints.",
-    stack: ["Spring Boot", "MongoDB", "AWS EC2", "AWS S3", "Microservices"],
-    outcome: "Shipped full-stack reservation system as project lead",
+      "Led a team of four to design and build a Spring Boot microservices architecture with MongoDB, real-time availability tracking, and an admin dashboard, deployed on AWS EC2 and S3 across Agile sprints.",
+    stack: ["Spring Boot", "MongoDB", "AWS EC2", "AWS S3", "Microservices", "Team Leadership"],
+    outcome:
+      "Fully deployed multi-service reservation system delivered end-to-end by a 4-person team under my technical leadership.",
     github: "https://github.com/CMPE202-CloudCircuit/BookMyTable",
   },
 ];
 
 export interface OtherProject {
   name: string;
-  description: string;
+  pitch: string;
+  stack: string[];
   github: string;
 }
 
 export const otherProjects: OtherProject[] = [
   {
     name: "JobSwipe",
-    description: "Swipe-based job discovery and matching app.",
+    pitch: "Swipe-based job recommendation app matching candidates to roles.",
+    stack: ["Flask", "React"],
     github: "https://github.com/nace129/JobSwipe",
   },
   {
     name: "Market Researcher & Car Maintenance Copilots",
-    description: "Hackathon project — AI copilots for research and car maintenance workflows.",
-    github:
-      "https://github.com/nace129/Market-Researcher-and-Car-Maintenance-Copilots-Hackathon",
+    pitch:
+      "Hackathon project pairing an agentic market-research assistant with a sound-based car maintenance diagnostic model.",
+    stack: ["Java", "Agentic AI", "Audio Classification"],
+    github: "https://github.com/nace129/Market-Researcher-and-Car-Maintenance-Copilots-Hackathon",
   },
 ];
 
@@ -223,7 +227,36 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-export const certifications = ["AWS Certified Solutions Architect – Associate"];
+export interface Certification {
+  name: string;
+  issuer: string;
+  credentialLabel: string;
+  heroLabel: string;
+  file: string;
+  fileType: "image" | "pdf";
+  badge: "aws" | "ceh";
+}
+
+export const certifications: Certification[] = [
+  {
+    name: "AWS Certified Solutions Architect",
+    issuer: "Amazon Web Services",
+    credentialLabel: "Associate",
+    heroLabel: "AWS Certified Solutions Architect — Associate",
+    file: "/certificates/aws-solutions-architect-associate.jpeg",
+    fileType: "image",
+    badge: "aws",
+  },
+  {
+    name: "Certified Ethical Hacker",
+    issuer: "EC-Council",
+    credentialLabel: "CEH",
+    heroLabel: "Certified Ethical Hacker (CEH)",
+    file: "/certificates/ceh-certified-ethical-hacker.pdf",
+    fileType: "pdf",
+    badge: "ceh",
+  },
+];
 
 export const navLinks = [
   { label: "About", href: "#about" },

@@ -1,5 +1,11 @@
 import { personal } from "@/data/content";
-import { GithubIcon, LinkedInIcon, MailIcon, DownloadIcon } from "@/components/icons";
+import {
+  GithubIcon,
+  LinkedInIcon,
+  XIcon,
+  YoutubeIcon,
+  MailIcon,
+} from "@/components/icons";
 
 export function Footer() {
   return (
@@ -45,19 +51,29 @@ export function Footer() {
             <LinkedInIcon className="h-5 w-5" />
           </a>
           <a
+            href={personal.twitter}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="X (Twitter) profile"
+            className="text-text-secondary transition-colors hover:text-accent"
+          >
+            <XIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={personal.youtube}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="YouTube channel"
+            className="text-text-secondary transition-colors hover:text-accent"
+          >
+            <YoutubeIcon className="h-5 w-5" />
+          </a>
+          <a
             href={`mailto:${personal.email}`}
             aria-label="Email Nidhi Shah"
             className="text-text-secondary transition-colors hover:text-accent"
           >
             <MailIcon className="h-5 w-5" />
-          </a>
-          <a
-            href={personal.resumeUrl}
-            download
-            aria-label="Download resume"
-            className="text-text-secondary transition-colors hover:text-accent"
-          >
-            <DownloadIcon className="h-5 w-5" />
           </a>
         </div>
       </div>

@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { navLinks, personal } from "@/data/content";
+import { navLinks } from "@/data/content";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { DownloadIcon } from "@/components/icons";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -32,13 +31,6 @@ export function Nav() {
               </li>
             ))}
           </ol>
-          <a
-            href={personal.resumeUrl}
-            download
-            className="flex items-center gap-2 rounded border border-accent px-4 py-2 font-mono text-xs text-accent transition-colors hover:bg-accent/10"
-          >
-            Resume <DownloadIcon className="h-3.5 w-3.5" />
-          </a>
           <ThemeToggle />
         </nav>
 
@@ -78,15 +70,6 @@ export function Nav() {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href={personal.resumeUrl}
-                download
-                className="inline-flex items-center gap-2 rounded border border-accent px-4 py-2 text-xs text-accent"
-              >
-                Resume <DownloadIcon className="h-3.5 w-3.5" />
-              </a>
-            </li>
           </ol>
         </nav>
       )}

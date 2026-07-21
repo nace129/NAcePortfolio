@@ -14,6 +14,22 @@ export function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function XIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M13.6 10.6 20.8 2.5h-1.7l-6.25 7.04L7.9 2.5H2.2l7.55 10.99L2.2 21.5h1.7l6.6-7.43 5.27 7.43h5.7l-7.87-10.9Zm-2.34 2.63-.77-1.08L4.5 3.7h2.63l4.9 6.9.76 1.08 6.38 8.98h-2.63l-5.2-7.33Z" />
+    </svg>
+  );
+}
+
+export function YoutubeIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.5v-7l6.3 3.5-6.3 3.5Z" />
+    </svg>
+  );
+}
+
 export function MailIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -145,6 +161,24 @@ export function AwsBadgeIcon(props: React.SVGProps<SVGSVGElement>) {
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
       <path d="M12 1.5 1.5 6.75v10.5L12 22.5l10.5-5.25V6.75L12 1.5Zm0 2.24 8 4v8.52l-8 4-8-4V7.74l8-4Z" />
       <path d="M12 6.4 7 8.9v6.2l5 2.5 5-2.5V8.9l-5-2.5Zm0 2.24 3 1.5v4.72l-3 1.5-3-1.5V10.14l3-1.5Z" />
+    </svg>
+  );
+}
+
+export function ShieldCheckIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M12 2.5 4.5 5.5v6c0 5 3.2 8.2 7.5 10 4.3-1.8 7.5-5 7.5-10v-6L12 2.5Z" />
+      <path d="m9 12 2 2 4-4.5" />
     </svg>
   );
 }
