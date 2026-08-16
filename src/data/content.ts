@@ -91,7 +91,7 @@ export const projects: Project[] = [
       "Built a RAG pipeline with semantic search, function calling, tool use, and structured outputs, layered with role-based access control at the retrieval layer and shadow-AI usage detection to flag ungoverned AI interactions.",
     stack: ["Python", "TypeScript", "RAG", "Semantic Search", "Vector DB", "Function Calling", "Access Control"],
     outcome:
-      "Production-style AI orchestration system with enforced access boundaries and a full audit trail on every AI interaction — [FILL IN real number once tested, e.g. 'blocked X% of out-of-role retrieval attempts in adversarial testing'].",
+      "Production-style AI orchestration system with enforced access boundaries and a full audit trail on every AI interaction — Production-style AI orchestration system with access boundaries enforced at the retrieval layer and a full audit trail on every AI interaction.",
     github: "https://github.com/SJSU-DataTrust/DataTrust_Project",
   },
   {
@@ -104,7 +104,7 @@ export const projects: Project[] = [
       "Built a dual-model NVIDIA NIM vision pipeline with automatic fallback, feeding into Nemotron-70B for natural-language scene description, across five specialized modes: general scene, medical/medication ID, navigation safety, text/OCR reading, and currency recognition.",
     stack: ["Flutter", "Dart", "FastAPI", "Python", "NVIDIA NIM", "Multimodal AI", "Text-to-Speech"],
     outcome:
-      "Five working AI-assisted accessibility modes with automatic model fallback for reliability — [FILL IN: latency per query, or accuracy on a small test set of scenes].",
+      "Five working AI-assisted accessibility modes with automatic model fallback for reliability — Five working AI-assisted accessibility modes with automatic model fallback for reliability. Backend and Flutter app run as functional parallel components; full end-to-end integration is in progress.",
     github: "https://github.com/nace129/VisionBuddy",
   },
   {
@@ -117,7 +117,7 @@ export const projects: Project[] = [
       "Built a browser extension that captures prompt/response pairs, correlates them by conversation via UUID turn-tracking, and runs an asynchronous PII-detection and explainable, rule-based risk-scoring pipeline so every flag is auditable, not a black-box score.",
     stack: ["Java", "Spring Boot", "PostgreSQL", "Chrome Extension (Manifest V3)", "AWS", "PII Detection"],
     outcome:
-      "End-to-end risk telemetry pipeline from browser capture to explainable risk score — [FILL IN: detection precision/recall, or number of interaction types covered].",
+      "End-to-end risk telemetry pipeline from browser capture to explainable risk score — End-to-end risk telemetry pipeline from browser capture through explainable risk score, covering four PII categories (email, SSN, phone, payment-card patterns) with automatic redaction of high-risk content.",
     github: "https://github.com/nace129/AI-Usage-Risk-Intelligence-Platform",
   },
   {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "Built structured-output LLM integration across Gemini and Cohere for resume-to-JD analysis, with audio-based mock interviews and real-time AI feedback on responses.",
     stack: ["React", "TypeScript", "Flask", "Gemini API", "Cohere API", "MongoDB", "AWS"],
     outcome:
-      "Full-stack AI coaching product spanning resume analysis to live audio interview feedback — [FILL IN: number of resume/JD pairs tested, or feedback accuracy/usefulness if you've gathered any].",
+      "Full-stack AI coaching product spanning resume analysis to live audio interview feedback — Full-stack AI coaching product spanning resume-to-JD analysis through live audio interview feedback, built on structured-output LLM integration across two providers.",
     github: "https://github.com/nace129/CareerPilotProject",
   },
   {
